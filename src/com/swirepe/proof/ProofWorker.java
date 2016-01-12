@@ -50,10 +50,8 @@ public class ProofWorker implements Callable<ProofOfWork> {
       byte[] hash = digest.digest(buffer.array());
       String hashString = DatatypeConverter.printHexBinary(hash);
       if (hashString.startsWith(leading)) {
-        
         return new ProofOfWork(hashString, createdAt, nonce, leadingZeros);
       }
     }
   }
-
 }
