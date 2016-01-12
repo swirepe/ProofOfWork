@@ -1,4 +1,4 @@
-package com.swirepe.proof.test;
+package com.swirepe.proof;
 
 import static org.junit.Assert.assertTrue;
 
@@ -15,7 +15,7 @@ public class VerificationIsFasterThanWorkTest {
   private static final Logger logger = Logger.getLogger(VerificationIsFasterThanWorkTest.class);
   
   @Test
-  public void test() throws NoSuchAlgorithmException {
+  public void testVerificationIsFasterThanWork() throws NoSuchAlgorithmException {
     byte[] data = "Hello world".getBytes();
     long start = System.currentTimeMillis();
     ProofOfWorkGenerator generator = new ProofOfWorkGenerator();

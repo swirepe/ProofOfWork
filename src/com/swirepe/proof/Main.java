@@ -20,7 +20,4 @@ public class Main {
     System.out.println("Verification successful: " + verified);
     System.exit(0);
   }
-  
 }
-  
-  

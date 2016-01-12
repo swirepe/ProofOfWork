@@ -7,11 +7,11 @@ Given some data, prove that your machine put some thought into it.  This is for 
 
 ## How does it work?
 
-It forces the client to find a SHA512 hash collision.  Given some data, find a random nonce that, when appended to that data, produces a SHA512 hash string with a certain number of leading zeros.
+It forces the client to find a SHA512 hash collision.  Given some data, find a random nonce that, when appended to that data with a time stamp, produces a SHA512 hash string with a certain number of leading zeros.
 
 I think bitmessage does something similar.
 
-Each proof of work is valid for, by default, two hours.
+Each proof of work is valid for two hours, by default.
 
 ## How can I use it?
 

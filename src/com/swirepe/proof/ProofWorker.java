@@ -25,7 +25,6 @@ public class ProofWorker implements Callable<ProofOfWork> {
         + Long.BYTES   // timestamp
         + Long.BYTES); // nonce
     buffer.put(data, 0, dataLength);
-    
     buffer.putLong(dataLength, createdAt);
   }
   

@@ -1,4 +1,4 @@
-package com.swirepe.proof.test;
+package com.swirepe.proof;
 
 import static org.junit.Assert.assertFalse;
 
@@ -13,6 +13,7 @@ import com.swirepe.proof.ProofOfWorkVerifier;
 public class IncorrectVerificationTest {
   private final ProofOfWork correct;
   private final byte[] correctData = "Hello World".getBytes();
+  
   public IncorrectVerificationTest() {
     int threads = 2;
     int leadingZeros = 4;
@@ -28,7 +29,6 @@ public class IncorrectVerificationTest {
         badCreationTime,
         correct.nonce,
         correct.leadingZeros);
-    
     assertFalse(ProofOfWorkVerifier.verify(correctData, incorrectTime));
   }
 
@@ -41,7 +41,6 @@ public class IncorrectVerificationTest {
         expiredTime,
         correct.nonce,
         correct.leadingZeros);
-    
     assertFalse(ProofOfWorkVerifier.verify(correctData, incorrectTime));
   }
   
